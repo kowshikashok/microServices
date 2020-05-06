@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.6.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> 
 	</parent>
 	<groupId>com.javainuse</groupId>
 	<artifactId>microServices</artifactId>
@@ -47,8 +47,9 @@
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.0</version>
 				<configuration>
-					<repository>kowshikashok/${project.artifactId}</repository>
+					<repository>kowshikashok/microservices</repository>
 					<tag>${project.version}</tag>
+					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 					<buildArgs>
 						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
@@ -67,5 +68,6 @@
 		</plugins>
 		<finalName>spring-boot-docker-maven</finalName>
 	</build>
+	<!-->packaging>war</packaging--> 
 
 </project>
